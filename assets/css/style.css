@@ -8,17 +8,42 @@ body {
 header {
     background-color: #4CAF50;
     color: white;
-    padding: 10px 0;
-    text-align: center;
+    padding: 0 20px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    height: 60px; /* Adjust this value to set the height of the navigation bar */
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin-right: 20px;
+}
+
+.logo img {
+    height: 100%; /* Make the logo match the height of the navigation bar */
 }
 
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
 }
 
 nav ul li {
-    display: inline;
     margin: 0 10px;
 }
 
@@ -28,8 +53,29 @@ nav ul li a {
     font-weight: bold;
 }
 
+.login-btn a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
 .container {
     padding: 20px;
+}
+
+.welcome-photos {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.welcome-photos img {
+    width: 32%;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 .featured-content {

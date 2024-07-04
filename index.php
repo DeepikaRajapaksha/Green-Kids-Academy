@@ -3,6 +3,11 @@
 <div class="container">
     <h1>Welcome to Eco Kids</h1>
     <p>Your hub for learning about the environment and sustainability.</p>
+    <div class="welcome-photos">
+        <img src="assets/images/welcome1.jpg" alt="Welcome Photo 1">
+        <img src="assets/images/welcome2.jpg" alt="Welcome Photo 2">
+        <img src="assets/images/welcome3.jpg" alt="Welcome Photo 3">
+    </div>
     <div class="featured-content">
         <h2>Featured Articles</h2>
         <!-- Example articles, replace with dynamic content later -->
