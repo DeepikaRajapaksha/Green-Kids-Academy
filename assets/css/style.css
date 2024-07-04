@@ -6,7 +6,7 @@ body {
 }
 
 header {
-    background-color: #4CAF50;
+    background-color: #217827;
     color: white;
     padding: 0 20px;
 }
@@ -14,52 +14,63 @@ header {
 .header-content {
     display: flex;
     align-items: center;
-    height: 60px; /* Adjust this value to set the height of the navigation bar */
+    height: 75px; /* Adjust this value to set the height of the navigation bar */
 }
 
 nav {
     display: flex;
     align-items: center;
-    width: 100%;
+    justify-content: space-between;
+    width: 150%;
 }
 
 .logo {
     display: flex;
     align-items: center;
-    height: 100%;
-    margin-right: 20px;
+    margin-right: 50px;
 }
 
 .logo img {
-    height: 100%; /* Make the logo match the height of the navigation bar */
+    height: 80px; /* Adjust this value as needed */
+    width: auto; /* Maintains the aspect ratio */
 }
 
-nav ul {
+.nav-links {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex;
-    flex-grow: 1;
-    align-items: center;
 }
 
-nav ul li {
-    margin: 0 10px;
+.nav-links li {
+    margin: 0 30px;
 }
 
-nav ul li a {
+.nav-links li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+}
+
+.login-btn {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.login-btn li {
+    margin: 0;
 }
 
 .login-btn a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    background-color: #333;
-    padding: 5px 10px;
-    border-radius: 5px;
+    background-color: #df1919;
+    padding: 10px 40px;
+    border-radius: 100px;
 }
 
 .container {
@@ -105,7 +116,7 @@ nav ul li a {
 }
 
 footer {
-    background-color: #4CAF50;
+    background-color: #217827;
     color: white;
     text-align: center;
     padding: 10px 0;
