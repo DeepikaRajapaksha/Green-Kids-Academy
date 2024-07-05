@@ -1,10 +1,14 @@
 <?php include('includes/header.php'); ?>
 
 <div class="container">
-    <h1>Welcome to Eco Kids</h1>
-    <p>Your hub for learning about the environment and sustainability.</p>
     <div class="welcome-photos">
         <img src="assets/images/welcome1.png" alt="Welcome Photo 1">
+        <img src="assets/images/welcome2.png" alt="Welcome Photo 2">
+        <img src="assets/images/welcome3.png" alt="Welcome Photo 3">
+        <img src="assets/images/welcome4.png" alt="Welcome Photo 4">
+        <div class="welcome-text">
+            <h1><span class="welcome">Welcome</span><br><span class="academy">Green Kids Academy</span></h1>
+        </div>
     </div>
     <div class="featured-content">
         <h2>Featured Articles</h2>

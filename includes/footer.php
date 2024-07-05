@@ -1,6 +1,9 @@
-    </main>
-    <footer>
+
+<footer class="footer">
+    <div class="footer-content">
         <p>&copy; 2024 Eco Kids. All rights reserved.</p>
-    </footer>
+    </div>
+</footer>
 </body>
 </html>
+

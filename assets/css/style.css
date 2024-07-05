@@ -14,7 +14,7 @@ header {
 .header-content {
     display: flex;
     align-items: center;
-    height: 75px; /* Adjust this value to set the height of the navigation bar */
+    height: 75px; 
 }
 
 nav {
@@ -32,7 +32,7 @@ nav {
 }
 
 .logo img {
-    height: 80px; /* Adjust this value as needed */
+    height: 60px; /* Adjust this value as needed */
     width: auto; /* Maintains the aspect ratio */
 }
 
@@ -78,16 +78,83 @@ nav {
     padding: 20px;
 }
 
+@keyframes fadeIn {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+@keyframes slideIn {
+    0%, 100% { opacity: 0; transform: translateX(-100%); }
+    50% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideshow {
+    0%, 20%, 100% { opacity: 0; }
+    25%, 50% { opacity: 1; }
+    50%, 75% { opacity: 0; }
+    75%, 100% { opacity: 1; }
+}
+
 .welcome-photos {
+    position: relative;
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
+    overflow: hidden;
+    height: 60vh;;
 }
 
 .welcome-photos img {
-    width: 100%;
+    width:100%;
+    height: 100%;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    position: absolute; /* Position images on top of each other */
+    animation: slideshow 12s infinite; /* Adjust timing for each image */
+    opacity: 0;
+}
+
+.welcome-photos img:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.welcome-photos img:nth-child(2) {
+    animation-delay: 3s; /* 12s / 4 = 3s delay for each image */
+}
+
+.welcome-photos img:nth-child(3) {
+    animation-delay: 6s;
+}
+
+.welcome-photos img:nth-child(4) {
+    animation-delay: 9s;
+}
+
+.welcome-text {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.437); /* Transparent background */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    animation: fadeIn 6s infinite;
+}
+
+.welcome-text h1 {
+    margin: 0;
+    color: #217827;
+}
+
+.welcome-text .welcome {
+    font-size: 3em; /* Adjust the font size for "Welcome" */
+    animation: slideIn 6s infinite;
+}
+
+.welcome-text .academy {
+    font-size: 2em; /* Adjust the font size for "Green Kids Academy" */
+    animation: fadeIn 6s infinite;
 }
 
 .featured-content {
@@ -121,7 +188,7 @@ footer {
     color: white;
     text-align: center;
     padding: 10px 0;
-    position: fixed;
+    position:relative;
     width: 100%;
     bottom: 0;
 }
