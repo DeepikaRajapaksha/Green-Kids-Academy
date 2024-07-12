@@ -4,19 +4,19 @@
     <div class="hero-section">
         <div class="slideshow-container">
             <div class="mySlides fade">
-                <img src="assets/images/welcome1.png" style="width:100%">
+                <img src="assets/images/welcome4.png" style="width:100%">
                 <div class="text">Slide 1 Caption</div>
             </div>
             <div class="mySlides fade">
-                <img src="assets/images/welcome2.png" style="width:100%">
+                <img src="assets/images/welcome1.png" style="width:100%">
                 <div class="text">Slide 2 Caption</div>
             </div>
             <div class="mySlides fade">
-                <img src="assets/images/welcome3.png" style="width:100%">
+                <img src="assets/images/welcome2.png" style="width:100%">
                 <div class="text">Slide 3 Caption</div>
             </div>
             <div class="mySlides fade">
-                <img src="assets/images/welcome4.png" style="width:100%">
+                <img src="assets/images/welcome3.png" style="width:100%">
                 <div class="text">Slide 4 Caption</div>
             </div>
         </div>
