@@ -17,14 +17,15 @@
                 </div>
                 <ul class="nav-links">
                     <li><a href="index.php">Home</a></li>
-                    <li><a href="learn.php">Learn</a></li>
-                    <li><a href="activities.php">Activities</a></li>
-                    <li><a href="projects.php">Projects</a></li>
-                    <li><a href="habits.php">Green Habits</a></li>
-                    <li><a href="resources.php">Resources</a></li>
+                    <li><a href="About.php">About</a></li>
+                    <li><a href="ContactUs.php">Contact Us</a></li>
                 </ul>
                 <ul class="login-btn">
-                    <li><a href="login.php">Login</a></li>
+                    <li><a href="login.php">Log in</a></li>
+                </ul>
+
+                <ul class="login-btn">
+                    <li><a href="signup.php">Sign Up</a></li>
                 </ul>
             </nav>
         </div>
