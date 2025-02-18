@@ -33,20 +33,26 @@
     </div>
     <!-- Other content below -->
     <div class="featured-content">
-        <h2>Featured Articles</h2>
-        <!-- Example articles, replace with dynamic content later -->
+        <h2>Welcome to Green Kids Academy!</h2>
+        <h3>Introduction</h3>
+        <p>Join us in exploring the wonders of our planet! At Green Kids Academy, we believe that learning about the environment 
+            should be fun and exciting. From the magical forests to the deep oceans, there’s so much to discover! Our mission is to
+             inspire young minds to care for and protect our Earth.</p>
         <?php
-        // Example of dynamic PHP content
+        
         $articles = [
-            ['title' => 'Why Recycling Matters', 'content' => 'Recycling helps to reduce waste in landfills and conserves natural resources. Learn how you can recycle more effectively at home and school...'],
-            ['title' => 'Saving Water', 'content' => 'Water is a precious resource, and it\'s important to use it wisely. Find out how you can save water in your daily life and help protect our environment...']
+            ['title' => 'Let’s Explore Together!', 'content' => 'Are you ready to be an environmental hero? Green Kids Academy 
+            offers a collection of exciting lessons, fun games, and creative activities that teach you about the importance of 
+            nature and how we can all contribute to a cleaner, greener world. Whether it’s understanding recycling, learning 
+            about endangered species, or discovering how trees help clean our air, you will have lots of fun while learning'],
+           
         ];
 
         foreach ($articles as $article) {
             echo "<div class='article'>";
             echo "<h3>" . $article['title'] . "</h3>";
             echo "<p>" . $article['content'] . "</p>";
-            echo "<a href='#'>Read more</a>";
+            echo "<a href='login.php'>Learn More</a>";
             echo "</div>";
         }
         ?>
