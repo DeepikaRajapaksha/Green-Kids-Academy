@@ -1,24 +1,23 @@
 <?php
-include('db.php');
+session_start();
+include('db.php'); // Include the database connection file
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $username = $_POST['username'];
     $email = $_POST['email'];
-    $password = password_hash($_POST['password'], PASSWORD_DEFAULT); // Hash password for security
+    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
     $sql = "INSERT INTO users (username, email, password) VALUES ('$username', '$email', '$password')";
-
     if ($conn->query($sql) === TRUE) {
-        // Redirect to courses.php after successful signup
+        echo "New user created successfully!";
         header("Location: courses.php");
         exit();
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
-
-    $conn->close();
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,13 +27,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </head>
 <body>
     <h2>Sign Up</h2>
-    <form action="signup.php" method="POST">
+    <form method="POST" action="signup.php">
         <label for="username">Username:</label>
-        <input type="text" name="username" required><br><br>
+        <input type="text" id="username" name="username" required><br><br>
         <label for="email">Email:</label>
-        <input type="email" name="email" required><br><br>
+        <input type="email" id="email" name="email" required><br><br>
         <label for="password">Password:</label>
-        <input type="password" name="password" required><br><br>
+        <input type="password" id="password" name="password" required><br><br>
         <button type="submit">Sign Up</button>
     </form>
 </body>
