@@ -17,8 +17,8 @@
                 </div>
                 <ul class="nav-links">
                     <li><a href="index.php">Home</a></li>
-                    <li><a href="About.php">About</a></li>
-                    <li><a href="ContactUs.php">Contact Us</a></li>
+                    <li><a href="about.php">About</a></li>
+                    <li><a href="contact.php">Contact Us</a></li>
                 </ul>
                 <ul class="login-btn">
                     <li><a href="login.php">Log in</a></li>

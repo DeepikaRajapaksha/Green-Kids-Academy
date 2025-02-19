@@ -7,11 +7,78 @@ if (!isset($_SESSION['role'])) {
     header("Location: login.php");
     exit();
 }
-
 if ($_SESSION['role'] == 'admin') {
-    echo "<h1>Welcome to the Courses Page, " . htmlspecialchars($_SESSION['username']) . "!</h1>";
-    echo "<a href='add_course.php'>Add New Course</a><br>";
-    echo "<a href='manage_courses.php'>Manage Courses</a><br>";
+    ?>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <title>Admin Dashboard</title>
+        <style>
+            .admin-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                background: linear-gradient(to right,rgb(173, 206, 186),rgb(134, 206, 165)); 
+            }
+            .admin-box {
+                background: #fff;
+                padding: 30px;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                text-align: center;
+                width: 350px;
+            }
+            .admin-options {
+                margin-top: 20px;
+            }
+            .admin-btn {
+                display: block;
+                padding: 10px;
+                margin: 10px 0;
+                background-color: #28a745;
+                color: white;
+                text-decoration: none;
+                border-radius: 5px;
+            }
+            .admin-btn:hover {
+                background-color: #218838;
+            }
+            .logout {
+                margin-top: 20px;
+            }
+            .logout-btn {
+                padding: 10px;
+                background-color: #dc3545;
+                color: white;
+                text-decoration: none;
+                border-radius: 5px;
+            }
+            .logout-btn:hover {
+                background-color: #c82333;
+            }
+        </style>
+    </head>
+    <body>
+    <div class="admin-container">
+        <div class="admin-box">
+            <h2>Welcome, Admin!</h2>
+            <p>Manage the courses and content for Eco Kids.</p>
+            <div class="admin-options">
+                <a href='add_course.php' class='admin-btn'>➕ Add New Course</a>
+                <a href='manage_courses.php' class='admin-btn'>📚 Manage Courses</a>
+            </div>
+            <div class="logout">
+                <a href='logout.php' class='logout-btn'>Logout</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<?php
 } else {
 ?>
 <!DOCTYPE html>
