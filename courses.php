@@ -88,6 +88,58 @@ if ($_SESSION['role'] == 'admin') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Eco Kids - Courses</title>
+
+    <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background: linear-gradient(to right, rgb(173, 206, 186), rgb(134, 206, 165));
+            }
+            main {
+                text-align: center;
+                padding: 40px 20px;
+            }
+            h2 {
+                color: #333;
+                margin-bottom: 20px;
+            }
+            .course-container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;
+            }
+            .course-box {
+                background: white;
+                padding: 30px;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                width: 300px;
+                text-align: center;
+            }
+            .course-box h3 {
+                color: #219150;
+                margin-bottom: 10px;
+            }
+            .course-box p {
+                color: #555;
+                font-size: 14px;
+                margin-bottom: 15px;
+            }
+            .follow-btn {
+                background-color: #28a745;
+                color: white;
+                padding: 10px 15px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background 0.3s;
+            }
+            .follow-btn:hover {
+                background-color: #218838;
+            }
+        </style>
 </head>
 <body>
     <header>
@@ -100,8 +152,8 @@ if ($_SESSION['role'] == 'admin') {
                 </div>
                 <ul class="nav-links">
                     <li><a href="index.php">Home</a></li>
-                    <li><a href="About.php">About</a></li>
-                    <li><a href="ContactUs.php">Contact Us</a></li>
+                    <li><a href="about.php">About</a></li>
+                    <li><a href="contact.php">Contact Us</a></li>
                 </ul>
                 <div class="login-btn">
                     <a href="logout.php">Logout</a>
@@ -111,30 +163,28 @@ if ($_SESSION['role'] == 'admin') {
     </header>
 
     <main>
-        <h2>Available Courses</h2>
+    <h2>Available Courses</h2>
         <div class="course-container">
             <?php
-            // Fetch courses from the database
-            $query = "SELECT course_name, course_description FROM courses"; // Updated column names
+            $query = "SELECT course_name, course_description FROM courses";
             $result = mysqli_query($conn, $query);
-
             if ($result && mysqli_num_rows($result) > 0) {
                 while ($course = mysqli_fetch_assoc($result)) {
-                    $course_name = isset($course['course_name']) ? htmlspecialchars($course['course_name']) : 'No Name';
-                    $course_desc = isset($course['course_description']) ? htmlspecialchars($course['course_description']) : 'No Description Available';
-
+                    $course_name = htmlspecialchars($course['course_name']);
+                    $course_desc = htmlspecialchars($course['course_description']);
                     echo "<div class='course-box'>";
                     echo "<h3>$course_name</h3>";
                     echo "<p>$course_desc</p>";
-                    echo "<button class='follow-btn'>Follow Course</button>"; // Simple follow button without ID
+                    echo "<button class='follow-btn'>Follow Course</button>";
                     echo "</div>";
                 }
             } else {
                 echo "<p>No courses available.</p>";
             }
             ?>
-        </div>
     </main>
+    <br>
+    
 
     <footer class="footer">
         <div class="footer-content">
