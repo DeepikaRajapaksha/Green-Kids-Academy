@@ -23,7 +23,7 @@
                 <ul class="login-btn">
                     <li><a href="login.php">Log in</a></li>
                 </ul>
-
+                <ul></ul>
                 <ul class="login-btn">
                     <li><a href="signup.php">Sign Up</a></li>
                 </ul>
